@@ -95,6 +95,7 @@ class Dog:
             SELECT *
             FROM dogs
             WHERE NAME = ? AND breed = ?
+            LIMIT 1
         """
         
         result = CURSOR.execute(sql, (name, breed)).fetchone()
